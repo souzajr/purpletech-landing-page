@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './components/App';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import PageNotFound from './components/PageNotFound';
+import * as serviceWorker from './serviceWorker';
 
 import './assets/vendor/css/purpletech-design-system-react.min.css';
 import './assets/vendor/nucleo/css/nucleo.css';
@@ -19,3 +20,5 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root'),
 );
+
+serviceWorker.register();
