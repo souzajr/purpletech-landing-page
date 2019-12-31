@@ -19,16 +19,16 @@ function Contact() {
   const [message, setMessage] = useState('');
 
   toast.configure({
-    position: "bottom-right",
+    position: 'bottom-right',
     autoClose: 4000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
-  })
+  });
 
   function notify(text) {
-    toast.error(text)
+    toast.error(text);
   }
 
   function handleSendMessage(e) {
@@ -48,38 +48,38 @@ function Contact() {
         setEmail('');
         setMessage('');
 
-        document.getElementById("formSendMessage").reset();
+        document.getElementById('formSendMessage').reset();
 
-        document.getElementById("alert-message")
-          .classList.remove("custom-alert-hide");
-        document.getElementById("alert-message")
-          .classList.add("custom-alert-show");
+        document.getElementById('alert-message')
+          .classList.remove('custom-alert-hide');
+        document.getElementById('alert-message')
+          .classList.add('custom-alert-show');
       })
-      .catch(err => {
+      .catch((err) => {
         notify(err.response.data);
 
-        document.getElementById("alert-message")
-          .classList.add("custom-alert-hide");
-        document.getElementById("alert-message")
-          .classList.remove("custom-alert-show");
+        document.getElementById('alert-message')
+          .classList.add('custom-alert-hide');
+        document.getElementById('alert-message')
+          .classList.remove('custom-alert-show');
 
-        if(err.response.data === 'Digite seu nome') {
-          document.getElementById("formName").classList.add("has-danger");
-          document.getElementById("inputName").focus();
-        } else if(err.response.data === 'Digite seu telefone') {
-          document.getElementById("formPhone").classList.add("has-danger");
-          document.getElementById("inputPhone").focus();
-        } else if(err.response.data === 'Digite seu Email') {
-          document.getElementById("formEmail").classList.add("has-danger");
-          document.getElementById("inputEmail").focus();
-        } else if(err.response.data === 'Email inválido') {
-          document.getElementById("formEmail").classList.add("has-danger");
-          document.getElementById("inputEmail").focus();
+        if (err.response.data === 'Digite seu nome') {
+          document.getElementById('formName').classList.add('has-danger');
+          document.getElementById('inputName').focus();
+        } else if (err.response.data === 'Digite seu telefone') {
+          document.getElementById('formPhone').classList.add('has-danger');
+          document.getElementById('inputPhone').focus();
+        } else if (err.response.data === 'Digite seu Email') {
+          document.getElementById('formEmail').classList.add('has-danger');
+          document.getElementById('inputEmail').focus();
+        } else if (err.response.data === 'Email inválido') {
+          document.getElementById('formEmail').classList.add('has-danger');
+          document.getElementById('inputEmail').focus();
         } else {
-          document.getElementById("formMessage").classList.add("has-danger");
-          document.getElementById("inputMessage").focus();
+          document.getElementById('formMessage').classList.add('has-danger');
+          document.getElementById('inputMessage').focus();
         }
-      })
+      });
   }
 
   return (
@@ -148,9 +148,9 @@ function Contact() {
                           placeholder="Nome"
                           type="text"
                           onChange={(e) => {
-                            setName(e.target.value)
-                            document.getElementById("formName")
-                              .classList.remove("has-danger");
+                            setName(e.target.value);
+                            document.getElementById('formName')
+                              .classList.remove('has-danger');
                           }}
                         />
                       </div>
@@ -167,9 +167,9 @@ function Contact() {
                             <InputMask
                               mask="(99) 99999-9999"
                               onChange={(e) => {
-                                setPhone(e.target.value)
-                                document.getElementById("formPhone")
-                                  .classList.remove("has-danger");
+                                setPhone(e.target.value);
+                                document.getElementById('formPhone')
+                                  .classList.remove('has-danger');
                               }}
                             >
                               {() => (
@@ -198,9 +198,9 @@ function Contact() {
                               placeholder="Email"
                               type="email"
                               onChange={(e) => {
-                                setEmail(e.target.value)
-                                document.getElementById("formEmail")
-                                  .classList.remove("has-danger");
+                                setEmail(e.target.value);
+                                document.getElementById('formEmail')
+                                  .classList.remove('has-danger');
                               }}
                             />
                           </div>
@@ -215,9 +215,9 @@ function Contact() {
                         cols="80"
                         placeholder="Mensagem"
                         onChange={(e) => {
-                          setMessage(e.target.value)
-                          document.getElementById("formMessage")
-                            .classList.remove("has-danger");
+                          setMessage(e.target.value);
+                          document.getElementById('formMessage')
+                            .classList.remove('has-danger');
                         }}
                       />
                     </div>
@@ -236,10 +236,12 @@ function Contact() {
                       role="alert"
                     >
                       <span className="alert-inner--icon">
-                        <i className="ni ni-like-2"></i>
+                        <i className="ni ni-like-2" />
                       </span>
                       <span className="alert-inner--text">
-                        <strong>Sucesso!</strong> Sua mensagem foi enviada.
+                        <strong>Sucesso!</strong>
+                        {' '}
+Sua mensagem foi enviada.
                       </span>
                     </div>
                   </form>
