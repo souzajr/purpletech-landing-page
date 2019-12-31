@@ -22,6 +22,26 @@ const Footer = () => (
             <a
               rel="noopener noreferrer"
               target="_blank"
+              href="https://www.facebook.com/purpletechbr"
+              className="btn btn-neutral btn-icon-only btn-facebook btn-lg btn-round"
+              data-toggle="tooltip"
+              data-original-title="Facebook"
+            >
+              <i className="fa fa-facebook" />
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/purpletechbrasil/"
+              className="btn btn-neutral btn-icon-only btn-instagram btn-round btn-lg"
+              data-toggle="tooltip"
+              data-original-title="Instagram"
+            >
+              <i className="fa fa-instagram" />
+            </a>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://wa.me/5519995360651"
               className="btn btn-neutral btn-icon-only btn-whatsapp btn-round btn-lg"
               data-toggle="tooltip"
@@ -32,18 +52,8 @@ const Footer = () => (
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.behance.net/purpletech"
-              className="btn btn-neutral btn-icon-only btn-behance btn-round btn-lg"
-              data-toggle="tooltip"
-              data-original-title="Behance"
-            >
-              <i className="fa fa-behance" />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
               href="mailto:contato@purpletech.com.br"
-              className="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round"
+              className="btn btn-neutral btn-icon-only btn-behance btn-lg btn-round"
               data-toggle="tooltip"
               data-original-title="Email"
             >

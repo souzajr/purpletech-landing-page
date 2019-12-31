@@ -21,6 +21,8 @@ class NavBar extends React.Component {
   }
 
   render() {
+    const { page } = this.props;
+
     return (
       <>
         <header className="header-global">
@@ -32,7 +34,7 @@ class NavBar extends React.Component {
             <Container>
               <NavbarBrand
                 className="mr-lg-5"
-                to={this.props.page === 'primary' ? '#!' : '/'}
+                to={page === 'primary' ? '#!' : '/'}
                 tag={Link}
               >
                 <img
@@ -47,7 +49,7 @@ class NavBar extends React.Component {
                 <div className="navbar-collapse-header">
                   <Row>
                     <Col className="collapse-brand" xs="6">
-                      <Link to={this.props.page === 'primary' ? '#!' : '/'}>
+                      <Link to={page === 'primary' ? '#!' : '/'}>
                         <img
                           alt="Logotipo"
                           src={require('../assets/logo.svg')}
@@ -63,34 +65,50 @@ class NavBar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <AnchorLink
-                    className="nav-link"
-                    href={this.props.page === 'primary' ? '#Home' : '/'}
-                  >
-                    <i className="ni ni-atom d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Home</span>
-                  </AnchorLink>
-                  <AnchorLink
-                    className="nav-link"
-                    href={this.props.page === 'primary' ? '#Servicos' : '/#Servicos'}
-                  >
-                    <i className="ni ni-ruler-pencil d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Serviços</span>
-                  </AnchorLink>
-                  <AnchorLink
-                    className="nav-link"
-                    href={this.props.page === 'primary' ? '#Portfolio' : '/#Portfolio'}
-                  >
-                    <i className="ni ni-spaceship d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Portfólio</span>
-                  </AnchorLink>
-                  <AnchorLink
-                    className="nav-link"
-                    href={this.props.page === 'primary' ? '#Contato' : '/#Contato'}
-                  >
-                    <i className="ni ni-notification-70 d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Contato</span>
-                  </AnchorLink>
+                  {page === 'primary'
+                    ? (
+                      <>
+                        <AnchorLink
+                          className="nav-link"
+                          href="#Home"
+                        >
+                          <i className="ni ni-atom d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">Home</span>
+                        </AnchorLink>
+                        <AnchorLink
+                          className="nav-link"
+                          href="#Servicos"
+                        >
+                          <i className="ni ni-ruler-pencil d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">Serviços</span>
+                        </AnchorLink>
+                        <AnchorLink
+                          className="nav-link"
+                          href="#Portfolio"
+                        >
+                          <i className="ni ni-spaceship d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">Portfólio</span>
+                        </AnchorLink>
+                        <AnchorLink
+                          className="nav-link"
+                          href="#Contato"
+                        >
+                          <i className="ni ni-notification-70 d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">Contato</span>
+                        </AnchorLink>
+                      </>
+                    )
+                    : (
+                      <Link
+                        to="/"
+                        className="nav-link"
+                      >
+                        <i className="ni ni-curved-next d-lg-none mr-1" />
+                        <span className="nav-link-inner--text">
+                          Voltar para a página inicial
+                        </span>
+                      </Link>
+                    )}
                   <a
                     className="nav-link fix-navLink"
                     href="https://app.purpletech.com.br"
