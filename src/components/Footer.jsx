@@ -79,10 +79,12 @@ const Footer = () => (
               {new Date().getFullYear()}
               &nbsp;
               PurpleTech
+              <br />
+              CNPJ 36.137.183/0001-39
             </div>
           </Col>
           <Col md="6">
-            <ul className="nav nav-footer justify-content-end">
+            <ul className="nav nav-footer justify-content-end fix-content-footer">
               <li className="nav-item">
                 <a href="/politica-de-privacidade" className="nav-link">
                   Política de privacidade
@@ -93,6 +95,17 @@ const Footer = () => (
         </Row>
       </Container>
     </footer>
+
+    <style jsx>
+      {`
+        @media screen and (max-width: 600px) {
+          .fix-content-footer {
+            justify-content: flex-start !important;
+            margin-left: -12px !important;
+          }
+        }
+      `}
+    </style>
   </>
 );
 

@@ -8,11 +8,11 @@ class PageNotFound extends React.Component {
   render() {
     return (
       <>
-        <style>
+        <style jsx>
           {`
             .align-center {
-                text-align: center;
-                margin-top: 50px;
+              text-align: center;
+              margin-top: 50px;
             }
           `}
         </style>
