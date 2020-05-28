@@ -56,6 +56,16 @@ function Portfolio() {
         />
       )}
 
+      <style jsx>
+        {`
+          @media (max-width: 600px) {
+            .fix-mobile {
+              margin-left: 30px !important;
+            }
+          }
+        `}
+      </style>
+
       <section id="Portfolio" className="section bg-secondary section-lg">
         <Container>
           <Row className="justify-content-center text-center mb-lg">
@@ -75,7 +85,7 @@ function Portfolio() {
                 md="4"
                 className="mt-sm"
               >
-                <Card className="custom-card shadow shadow-lg--hover">
+                <Card className="custom-card shadow shadow-lg--hover fix-mobile">
                   <CardImg
                     alt={custumer.name}
                     onClick={() => handleDetails(index)}
