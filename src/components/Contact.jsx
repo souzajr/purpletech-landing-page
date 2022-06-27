@@ -1,87 +1,12 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
+import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import {
-  Button,
-  Card,
-  CardBody,
   Container,
   Row,
   Col,
 } from 'reactstrap';
-import InputMask from 'react-input-mask';
-import { sendMessage } from '../services';
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  toast.configure({
-    position: 'bottom-right',
-    autoClose: 4000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-  });
-
-  function notify(text) {
-    toast.error(text);
-  }
-
-  function handleSendMessage(e) {
-    e.preventDefault();
-
-    const data = {
-      name,
-      phone,
-      email,
-      message,
-    };
-
-    sendMessage(data)
-      .then(() => {
-        setName('');
-        setPhone('');
-        setEmail('');
-        setMessage('');
-
-        document.getElementById('formSendMessage').reset();
-
-        document.getElementById('alert-message')
-          .classList.remove('custom-alert-hide');
-        document.getElementById('alert-message')
-          .classList.add('custom-alert-show');
-      })
-      .catch((err) => {
-        notify(err.response.data);
-
-        document.getElementById('alert-message')
-          .classList.add('custom-alert-hide');
-        document.getElementById('alert-message')
-          .classList.remove('custom-alert-show');
-
-        if (err.response.data === 'Digite seu nome') {
-          document.getElementById('formName').classList.add('has-danger');
-          document.getElementById('inputName').focus();
-        } else if (err.response.data === 'Digite seu telefone') {
-          document.getElementById('formPhone').classList.add('has-danger');
-          document.getElementById('inputPhone').focus();
-        } else if (err.response.data === 'Digite seu Email') {
-          document.getElementById('formEmail').classList.add('has-danger');
-          document.getElementById('inputEmail').focus();
-        } else if (err.response.data === 'Email inválido') {
-          document.getElementById('formEmail').classList.add('has-danger');
-          document.getElementById('inputEmail').focus();
-        } else {
-          document.getElementById('formMessage').classList.add('has-danger');
-          document.getElementById('inputMessage').focus();
-        }
-      });
-  }
-
   return (
     <>
       <section id="Contato" className="section section-lg bg-gradient-default">
@@ -107,10 +32,10 @@ function Contact() {
             </Col>
             <Col lg="4">
               <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                <i className="fa fa-phone text-primary" />
+                <i className="fa fa-whatsapp text-primary" />
               </div>
               <h5 className="mt-3">
-                <a className="text-white" href="tel:+5519995360651">
+                <a className="text-white" href="https://wa.me/5519995360651">
                   (19) 9 9536-0651
                 </a>
               </h5>

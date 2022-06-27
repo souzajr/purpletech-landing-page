@@ -48,16 +48,6 @@ function Portfolio() {
         />
       )}
 
-      <style jsx>
-        {`
-          @media (max-width: 600px) {
-            .fix-mobile {
-              margin-left: 30px !important;
-            }
-          }
-        `}
-      </style>
-
       <section id="Portfolio" className="section bg-secondary section-lg">
         <Container>
           <Row className="justify-content-center text-center mb-lg">

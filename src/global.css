@@ -1,0 +1,16 @@
+@media screen and (max-width: 600px) {
+  .fix-mobile {
+    margin-left: 30px !important;
+  }
+
+  .fix-content-footer {
+    justify-content: flex-start !important;
+    margin-left: -12px !important;
+  }
+}
+
+
+.align-center {
+  text-align: center;
+  margin-top: 50px;
+}

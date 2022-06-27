@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import './assets/vendor/css/purpletech-design-system-react.min.css';
 import './assets/vendor/nucleo/css/nucleo.css';
 import './assets/vendor/font-awesome/css/font-awesome.min.css';
+import './global.css';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,7 +19,7 @@ ReactDOM.render(
       <Route path="*" component={PageNotFound} status={404} />
     </Switch>
   </BrowserRouter>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 serviceWorker.register();
