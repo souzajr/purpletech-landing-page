@@ -1,32 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {
   Card,
   CardBody,
-  CardImg,
   CardText,
   CardTitle,
   Container,
   Row,
   Col,
 } from 'reactstrap';
-import { getPortfolio } from '../services';
+import listOfPortfolio from '../portfolio';
 
 function Portfolio() {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [currentCustomer, setCurrentCustomer] = useState('');
-  const [customers, setCustomers] = useState('');
-
-  useEffect(() => {
-    getPortfolio()
-      .then((response) => setCustomers(response.data))
-      .catch(() => setCustomers(''));
-  }, []);
 
   function handleDetails(index) {
-    setCurrentCustomer(customers[index]);
+    setCurrentCustomer(listOfPortfolio[index]);
     setIsOpen(true);
   }
 
@@ -74,19 +66,22 @@ function Portfolio() {
                 Portfólio
               </h2>
               <p className="lead text-muted">
-                Confira alguns projetos feitos pela PurpleTech. Nossa equipe está preparada para atender suas necessidas e criar o produto ideal para você e sua empresa.
+                Confira alguns projetos feitos pela PurpleTech. Nossa equipe está
+                preparada para atender suas necessidas e criar o produto ideal
+                para você e sua empresa.
               </p>
             </Col>
           </Row>
           <Row>
-            {customers.length ? customers.map((custumer, index) => (
+            {listOfPortfolio.map((custumer, index) => (
               <Col
-                key={custumer._id}
+                key={custumer.id}
                 md="4"
                 className="mt-sm"
               >
                 <Card className="custom-card shadow shadow-lg--hover fix-mobile">
-                  <CardImg
+                  {/* eslint-disable-next-line */}
+                  <img
                     alt={custumer.name}
                     onClick={() => handleDetails(index)}
                     src={custumer.images[0]}
@@ -118,7 +113,7 @@ function Portfolio() {
                   </CardBody>
                 </Card>
               </Col>
-            )) : <h3>Carregando...</h3>}
+            ))}
           </Row>
         </Container>
       </section>

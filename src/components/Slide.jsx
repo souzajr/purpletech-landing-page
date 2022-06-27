@@ -36,7 +36,7 @@ const Slide = () => (
                     <span className="btn-inner--icon"><i className="fa fa-code" /></span>
                     <span className="btn-inner--text">Saiba mais</span>
                   </AnchorLink>
-                  <AnchorLink offset="100" className="btn btn-white btn-icon mb-3 mb-sm-0" href="#MandeUmaMensagem">
+                  <AnchorLink offset="100" className="btn btn-white btn-icon mb-3 mb-sm-0" href="#Contato">
                     <span className="btn-inner--icon"><i className="fa fa-envelope" /></span>
                     <span className="btn-inner--text">Mande uma mensagem</span>
                   </AnchorLink>

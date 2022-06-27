@@ -124,7 +124,7 @@ function Contact() {
           </svg>
         </div>
       </section>
-      <section id="MandeUmaMensagem" className="section section-lg pt-lg-0 section-contact-us">
+      {/* <section id="MandeUmaMensagem" className="section section-lg pt-lg-0 section-contact-us">
         <Container>
           <Row className="justify-content-center mt--300">
             <Col lg="8">
@@ -250,7 +250,7 @@ Sua mensagem foi enviada.
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 }

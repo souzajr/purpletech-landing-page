@@ -96,6 +96,19 @@ class NavBar extends React.Component {
                           <i className="ni ni-notification-70 d-lg-none mr-1" />
                           <span className="nav-link-inner--text">Contato</span>
                         </AnchorLink>
+                        <AnchorLink offset="100" className="nav-link fix-navLink" href="#Contato">
+                          <Button
+                            className="btn-neutral btn-icon"
+                            color="default"
+                          >
+                            <span className="btn-inner--icon">
+                              <i className="fa fa-paper-plane mr-2" />
+                            </span>
+                            <span className="nav-link-inner--text ml-1">
+                              Solicitar orçamento
+                            </span>
+                          </Button>
+                        </AnchorLink>
                       </>
                     )
                     : (
@@ -109,39 +122,26 @@ class NavBar extends React.Component {
                         </span>
                       </Link>
                     )}
-                  <a
-                    className="nav-link fix-navLink"
-                    href="https://app.purpletech.com.br"
-                  >
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                    >
-                      <span className="btn-inner--icon">
-                        <i className="fa fa-paper-plane mr-2" />
-                      </span>
-                      <span className="nav-link-inner--text ml-1">
-                        Solicitar orçamento
-                      </span>
-                    </Button>
-                  </a>
                 </Nav>
-                <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                  <NavItem className="d-none d-lg-block ml-lg-4">
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      href="https://app.purpletech.com.br"
-                    >
-                      <span className="btn-inner--icon">
-                        <i className="fa fa-paper-plane mr-2" />
-                      </span>
-                      <span className="nav-link-inner--text ml-1">
-                        Solicitar orçamento
-                      </span>
-                    </Button>
-                  </NavItem>
-                </Nav>
+                {page === 'primary' && (
+                  <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                    <NavItem className="d-none d-lg-block ml-lg-4">
+                      <AnchorLink offset="100" href="#Contato">
+                        <Button
+                          className="btn-neutral btn-icon"
+                          color="default"
+                        >
+                          <span className="btn-inner--icon">
+                            <i className="fa fa-paper-plane mr-2" />
+                          </span>
+                          <span className="nav-link-inner--text ml-1">
+                            Solicitar orçamento
+                          </span>
+                        </Button>
+                      </AnchorLink>
+                    </NavItem>
+                  </Nav>
+                )}
               </UncontrolledCollapse>
             </Container>
           </Navbar>
