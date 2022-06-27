@@ -27,6 +27,7 @@ const Services = () => (
               alt="Desenvolvimento web"
               src={require('../assets/img/desenvolvimento-web.png')}
               className="img-fluid floating"
+              loading="lazy"
             />
           </Col>
           <Col md="6" className="order-md-1">
@@ -89,6 +90,7 @@ const Services = () => (
                 alt="Desenvolvimento de app"
                 src={require('../assets/img/desenvolvimento-app.png')}
                 className="img-center img-fluid"
+                loading="lazy"
               />
             </div>
           </Col>
@@ -156,6 +158,7 @@ const Services = () => (
               <CardImg
                 alt="Web development"
                 src={require('../assets/img/home_webdeveloper.jpg')}
+                loading="lazy"
               />
               <blockquote className="card-blockquote">
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="svg-bg">

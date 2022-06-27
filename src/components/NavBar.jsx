@@ -42,7 +42,7 @@ class NavBar extends React.Component {
                   src={require('../assets/logo-white.svg')}
                 />
               </NavbarBrand>
-              <Button className="navbar-toggler" id="navbar_global">
+              <Button className="navbar-toggler" id="navbar_global" aria-label="Menu Open">
                 <span className="navbar-toggler-icon" />
               </Button>
               <UncontrolledCollapse navbar toggler="#navbar_global">
@@ -57,7 +57,7 @@ class NavBar extends React.Component {
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">
-                      <Button className="navbar-toggler" id="navbar_global">
+                      <Button className="navbar-toggler" id="navbar_global" aria-label="Menu close">
                         <span />
                         <span />
                       </Button>
@@ -122,15 +122,17 @@ class NavBar extends React.Component {
                       </>
                     )
                     : (
-                      <Link
-                        to="/"
-                        className="nav-link"
-                      >
-                        <i className="ni ni-curved-next d-lg-none mr-1" />
-                        <span className="nav-link-inner--text">
-                          Voltar para a página inicial
-                        </span>
-                      </Link>
+                      <li>
+                        <Link
+                          to="/"
+                          className="nav-link"
+                        >
+                          <i className="ni ni-curved-next d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">
+                            Voltar para a página inicial
+                          </span>
+                        </Link>
+                      </li>
                     )}
                 </Nav>
                 {page === 'primary' && (
@@ -140,6 +142,7 @@ class NavBar extends React.Component {
                         <Button
                           className="btn-neutral btn-icon"
                           color="default"
+                          aria-label="Menu"
                         >
                           <span className="btn-inner--icon">
                             <i className="fa fa-paper-plane mr-2" />

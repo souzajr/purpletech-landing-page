@@ -1,3 +1,9 @@
+body {
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @media screen and (max-width: 600px) {
   .fix-mobile {
     margin-left: 30px !important;
@@ -8,7 +14,6 @@
     margin-left: -12px !important;
   }
 }
-
 
 .align-center {
   text-align: center;
