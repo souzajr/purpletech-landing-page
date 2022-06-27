@@ -87,7 +87,7 @@ class PrivacyPolicy extends React.Component {
                 <Col lg="12">
                   <h4>SEÇÃO 3 – DIVULGAÇÃO</h4>
                   <p className="lead text-muted">
-                    Podemos divulgar suas informações pessoais caso sejamos obrigados pela lei ou se você violar nossa Política de Privacidade.
+                    Seus dados e informações pessoais não serão divulgados ou fornecidos para terceiros, exceto por determinação judicial.
                   </p>
                 </Col>
                 <Col lg="12">
@@ -111,9 +111,7 @@ class PrivacyPolicy extends React.Component {
                 <Col lg="12">
                   <h4>SEÇÃO 5 – SEGURANÇA</h4>
                   <p className="lead text-muted">
-                    Para proteger suas informações pessoais, tomamos precauções razoáveis e seguimos as melhores práticas da indústria para nos certificar que elas não serão perdidas inadequadamente, usurpadas, acessadas, divulgadas, alteradas ou destruídas.
-                    <br />
-                    Se você nos fornecer as suas informações de cartão de crédito, essa informação será criptografada usando tecnologia “secure socket layer” (SSL) e armazenada com uma criptografia AES-256. Embora nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro, nós seguimos todos os requisitos da PCI-DSS e implementamos padrões adicionais geralmente aceitos pela indústria.
+                    Para proteger suas informações pessoais, tomamos todas as precauções obedecendo a legislações em vigor, Lei Geral de Proteção aos Dados, Código Civil, Código do Consumidor e demais leis.
                   </p>
                 </Col>
                 <Col lg="12">
