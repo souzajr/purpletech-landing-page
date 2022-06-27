@@ -15,7 +15,7 @@ import listOfPortfolio from '../portfolio';
 function Portfolio() {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [currentCustomer, setCurrentCustomer] = useState('');
+  const [currentCustomer, setCurrentCustomer] = useState();
 
   function handleDetails(index) {
     setCurrentCustomer(listOfPortfolio[index]);
