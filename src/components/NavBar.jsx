@@ -68,47 +68,57 @@ class NavBar extends React.Component {
                   {page === 'primary'
                     ? (
                       <>
-                        <AnchorLink
-                          className="nav-link"
-                          href="#Home"
-                        >
-                          <i className="ni ni-atom d-lg-none mr-1" />
-                          <span className="nav-link-inner--text">Home</span>
-                        </AnchorLink>
-                        <AnchorLink
-                          className="nav-link"
-                          href="#Servicos"
-                        >
-                          <i className="ni ni-ruler-pencil d-lg-none mr-1" />
-                          <span className="nav-link-inner--text">Serviços</span>
-                        </AnchorLink>
-                        <AnchorLink
-                          className="nav-link"
-                          href="#Portfolio"
-                        >
-                          <i className="ni ni-spaceship d-lg-none mr-1" />
-                          <span className="nav-link-inner--text">Portfólio</span>
-                        </AnchorLink>
-                        <AnchorLink
-                          className="nav-link"
-                          href="#Contato"
-                        >
-                          <i className="ni ni-notification-70 d-lg-none mr-1" />
-                          <span className="nav-link-inner--text">Contato</span>
-                        </AnchorLink>
-                        <AnchorLink offset="100" className="nav-link fix-navLink" href="#Contato">
-                          <Button
-                            className="btn-neutral btn-icon"
-                            color="default"
+                        <li>
+                          <AnchorLink
+                            className="nav-link"
+                            href="#Home"
                           >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-paper-plane mr-2" />
-                            </span>
-                            <span className="nav-link-inner--text ml-1">
-                              Solicitar orçamento
-                            </span>
-                          </Button>
-                        </AnchorLink>
+                            <i className="ni ni-atom d-lg-none mr-1" />
+                            <span className="nav-link-inner--text">Home</span>
+                          </AnchorLink>
+                        </li>
+                        <li>
+                          <AnchorLink
+                            className="nav-link"
+                            href="#Servicos"
+                          >
+                            <i className="ni ni-ruler-pencil d-lg-none mr-1" />
+                            <span className="nav-link-inner--text">Serviços</span>
+                          </AnchorLink>
+                        </li>
+                        <li>
+                          <AnchorLink
+                            className="nav-link"
+                            href="#Portfolio"
+                          >
+                            <i className="ni ni-spaceship d-lg-none mr-1" />
+                            <span className="nav-link-inner--text">Portfólio</span>
+                          </AnchorLink>
+                        </li>
+                        <li>
+                          <AnchorLink
+                            className="nav-link"
+                            href="#Contato"
+                          >
+                            <i className="ni ni-notification-70 d-lg-none mr-1" />
+                            <span className="nav-link-inner--text">Contato</span>
+                          </AnchorLink>
+                        </li>
+                        <li>
+                          <AnchorLink offset="100" className="nav-link fix-navLink" href="#Contato">
+                            <Button
+                              className="btn-neutral btn-icon"
+                              color="default"
+                            >
+                              <span className="btn-inner--icon">
+                                <i className="fa fa-paper-plane mr-2" />
+                              </span>
+                              <span className="nav-link-inner--text ml-1">
+                                Solicitar orçamento
+                              </span>
+                            </Button>
+                          </AnchorLink>
+                        </li>
                       </>
                     )
                     : (

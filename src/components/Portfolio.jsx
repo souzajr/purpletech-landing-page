@@ -75,6 +75,7 @@ function Portfolio() {
                     alt={custumer.name}
                     onClick={() => handleDetails(index)}
                     src={custumer.images[0]}
+                    loading="lazy"
                   />
                   <CardBody>
                     <h5>

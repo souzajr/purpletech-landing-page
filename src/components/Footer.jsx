@@ -25,6 +25,7 @@ const Footer = () => (
             className="btn btn-neutral btn-icon-only btn-facebook btn-lg btn-round"
             data-toggle="tooltip"
             data-original-title="Facebook"
+            aria-label="Facebook"
           >
             <i className="fa fa-facebook" />
           </a>
@@ -35,6 +36,7 @@ const Footer = () => (
             className="btn btn-neutral btn-icon-only btn-instagram btn-round btn-lg"
             data-toggle="tooltip"
             data-original-title="Instagram"
+            aria-label="Instagram"
           >
             <i className="fa fa-instagram" />
           </a>
@@ -45,6 +47,7 @@ const Footer = () => (
             className="btn btn-neutral btn-icon-only btn-whatsapp btn-round btn-lg"
             data-toggle="tooltip"
             data-original-title="WhatsApp"
+            aria-label="WhatsApp"
           >
             <i className="fa fa-whatsapp" />
           </a>
@@ -55,6 +58,7 @@ const Footer = () => (
             className="btn btn-neutral btn-icon-only btn-behance btn-lg btn-round"
             data-toggle="tooltip"
             data-original-title="Email"
+            aria-label="Email"
           >
             <i className="fa fa-envelope" />
           </a>
@@ -65,6 +69,7 @@ const Footer = () => (
             className="btn btn-neutral btn-icon-only btn-github btn-round btn-lg"
             data-toggle="tooltip"
             data-original-title="Github"
+            aria-label="Github"
           >
             <i className="fa fa-github" />
           </a>
