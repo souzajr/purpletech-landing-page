@@ -17,7 +17,7 @@ const Services = () => (
           <Col lg="8">
             <h2 className="display-3">O que nós oferecemos?</h2>
             <p className="lead text-muted">
-              A PurpleTech atua há três anos no mercado com seriedade e excelência no atendimento para dar vida a sua ideia e potencializar seu sucesso.
+              A PurpleTech atua há cinco anos no mercado com seriedade e excelência no atendimento para dar vida a sua ideia e potencializar seu sucesso.
             </p>
           </Col>
         </Row>
